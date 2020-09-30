@@ -2,24 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68496c0c-14a6-4021-b999-a99577913215" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/constrollers/auth_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constrollers/task_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/constrollers/tasks_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/address.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/credentials.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/task.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/user.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/routing/named_routes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/routing/route_names.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/pages/login_form_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/pages/registration_form_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/pages/task_form_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/pages/tasks_overview_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/routing/bindings/home_bindings.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/routing/bindings/initial_bindings.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constrollers/auth_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constrollers/auth_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constrollers/task_controller.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constrollers/tasks_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constrollers/tasks_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/routing/named_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routing/named_routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/pages/login_form_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/login_form_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/pages/registration_form_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/registration_form_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +42,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -63,5 +58,35 @@
       <updated>1601425161800</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="229" y="10" key="CommitChangelistDialog2" timestamp="1601508165398">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="229" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601508165398" />
+    <state x="0" y="68" key="DiffContextDialog" timestamp="1601508133269">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="68" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1601508133269" />
+    <state width="1098" height="178" key="GridCell.Tab.0.bottom" timestamp="1601505915475">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1098" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601505915475" />
+    <state width="1098" height="178" key="GridCell.Tab.0.center" timestamp="1601505915475">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1098" height="178" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601505915475" />
+    <state width="1098" height="178" key="GridCell.Tab.0.left" timestamp="1601505915475">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1098" height="178" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601505915475" />
+    <state width="1098" height="178" key="GridCell.Tab.0.right" timestamp="1601505915475">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1098" height="178" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601505915475" />
+    <state x="100" y="100" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1601504246608">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="100" y="100" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1601504246608" />
   </component>
 </project>

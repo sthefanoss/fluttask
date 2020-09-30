@@ -1,9 +1,8 @@
-import 'package:flutter/foundation.dart';
+import 'package:get/get.dart';
 import '../models/task.dart';
 
-
-class TasksController extends ChangeNotifier {
-  List<TasksController> _tasksControllers;
+class TasksController extends GetxController {
+  final tasks = RxList<Task>([]);
 
   Future<void> init() async {
     //TODO
@@ -14,6 +13,14 @@ class TasksController extends ChangeNotifier {
   }
 
   Future<void> excludeTask(int id) async {
+    //TODO
+  }
+
+  Future<void> updateTask(Task updatedTask) async {
+    //TODO
+  }
+
+  Future<void> concludeTask(int id) async {
     //TODO
   }
 }
