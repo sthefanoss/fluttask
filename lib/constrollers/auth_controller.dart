@@ -1,7 +1,8 @@
+import 'package:fluttask/data/models/credentials.dart';
+import 'package:fluttask/data/models/user.dart';
 import 'package:fluttask/data/repository/repository.dart';
 import 'package:get/get.dart';
-import '../models/credentials.dart';
-import '../models/user.dart';
+
 
 class AuthController extends GetxController {
   final user = Rx<User>();

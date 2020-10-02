@@ -1,6 +1,6 @@
 import 'package:fluttask/constrollers/auth_controller.dart';
+import 'package:fluttask/data/models/credentials.dart';
 import 'package:fluttask/helpers/validators.dart';
-import 'package:fluttask/models/credentials.dart';
 import 'package:fluttask/routing/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -119,7 +119,7 @@ class _LoginFormPageState extends State<LoginFormPage> {
   Future<void> _login() async {
     bool wasSuccessful = await authController.login(
       Credentials(
-        email: emailController.text,
+        email: emailController.text.trim().toLowerCase(),
         password: passwordController.text.hashCode.toString(),
       ),
     );

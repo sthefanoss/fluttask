@@ -1,5 +1,5 @@
+import 'package:fluttask/data/models/task.dart';
 import 'package:fluttask/helpers/date_parser.dart';
-import 'package:fluttask/models/task.dart';
 import 'package:flutter/material.dart';
 
 class TaskListTile extends StatefulWidget {

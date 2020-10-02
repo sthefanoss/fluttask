@@ -1,9 +1,9 @@
-import 'package:fluttask/models/credentials.dart';
-import 'package:fluttask/models/task.dart';
-import 'package:fluttask/models/user.dart';
+import 'package:fluttask/data/models/credentials.dart';
+import 'package:fluttask/data/models/task.dart';
+import 'package:fluttask/data/models/user.dart';
+import 'package:fluttask/data/repository/local/storage.dart';
+import 'package:fluttask/data/repository/network/api_endpoints.dart';
 
-import 'local/storage.dart';
-import 'network/api_endpoints.dart';
 
 abstract class Repository {
   static Future<bool> addUser(User user) async {
@@ -24,6 +24,10 @@ abstract class Repository {
 
   static Future<bool> removeTask(int taskId) async {
     return Storage.removeTask(taskId);
+  }
+
+  static Future<List<Task>> getTasks(Credentials credentials) async {
+    return await Storage.getTasks(credentials);
   }
 
   static Future<String> getLocationFromCep(String cep) async {

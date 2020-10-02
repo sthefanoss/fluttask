@@ -1,7 +1,7 @@
 import 'package:fluttask/constrollers/auth_controller.dart';
 import 'package:fluttask/constrollers/tasks_controller.dart';
+import 'package:fluttask/data/models/task.dart';
 import 'package:fluttask/helpers/date_parser.dart';
-import 'package:fluttask/models/task.dart';
 import 'package:get/get.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:flutter/material.dart';
@@ -90,8 +90,7 @@ class _TaskFormPageState extends State<TaskFormPage> {
                 decoration: InputDecoration(labelText: 'Data de Conclusão'),
                 inputFormatters: [dateOfConclusionFormatter],
                 validator: (text) {
-                  if (text.isNotEmpty &&
-                      DateTimeFormatter.decode(text) == null)
+                  if (text.isNotEmpty && DateTimeFormatter.decode(text) == null)
                     return "Data de Conclusão inválida.";
                   return null;
                 },
@@ -124,20 +123,29 @@ class _TaskFormPageState extends State<TaskFormPage> {
 
     setState(() => isAwaiting = true);
 
-    bool wasSuccessful = await tasksController.createOrEditTask(Task(
-      //TODO userId:  authController.user.value.id;
-      id: oldTask == null ? DateTime.now().toIso8601String() : oldTask.id,
+    bool wasSuccessful;
+    if (oldTask == null)
+      wasSuccessful = await tasksController.createTask(_getTaskFromForm());
+    else
+      wasSuccessful = await tasksController.editTask(_getTaskFromForm());
+
+    if (wasSuccessful) {
+      Get.back();
+    } else {
+      setState(() => isAwaiting = false);
+    }
+  }
+
+  Task _getTaskFromForm() {
+    return Task(
       name: nameController.text,
       description: descriptionController.text,
-      dateOfDelivery: DateTimeFormatter.decode(dateOfDeliveryController.text),
+      dateOfDelivery: DateTimeFormatter.decode(
+        dateOfDeliveryController.text,
+      ),
       dateOfConclusion: DateTimeFormatter.decode(
         dateOfConclusionController.text,
       ),
-    ));
-
-    if (wasSuccessful)
-      Get.back();
-    else
-      setState(() => isAwaiting = false);
+    );
   }
 }

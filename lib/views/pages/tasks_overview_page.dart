@@ -23,13 +23,17 @@ class _TasksOverviewPageState extends State<TasksOverviewPage> {
       drawer: AppDrawer(),
       body: Obx(
         () => tasksController.tasks.isEmpty
-            ? Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(48),
-                child: Text(
-                  "Parece que você ainda não possui tarefas.",
-                  style: Theme.of(context).textTheme.headline6,
-                ),
+            ? Obx(
+                () => !tasksController.hasInit.value
+                    ? Container()
+                    : Container(
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.all(48),
+                        child: Text(
+                          "Parece que você ainda não possui tarefas.",
+                          style: Theme.of(context).textTheme.headline6,
+                        ),
+                      ),
               )
             : ListView.builder(
                 padding: const EdgeInsets.all(12),
@@ -47,7 +51,8 @@ class _TasksOverviewPageState extends State<TasksOverviewPage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () => Get.toNamed(RouteNames.taskForm),
+        // onPressed: () => Get.toNamed(RouteNames.taskForm),
+        onPressed: tasksController.onInit,
       ),
     );
   }

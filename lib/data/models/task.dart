@@ -17,9 +17,34 @@ class Task {
     this.isConcluded = false,
   });
 
+  factory Task.fromMap(Map map) {
+    return Task(
+      id: map['id'],
+      userEmail: map['userEmail'],
+      name: map['name'],
+      description: map['description'],
+      isConcluded: map['isConcluded'] == 1,
+      dateOfDelivery: DateTime.parse(map['dateOfDelivery']),
+      dateOfConclusion: DateTime.tryParse(map['dateOfConclusion']) ?? null,
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'userEmail': userEmail,
+      'name': name,
+      'description': description,
+      'isConcluded': isConcluded ? 1 : 0,
+      'dateOfDelivery': dateOfDelivery.toIso8601String(),
+      'dateOfConclusion':
+          dateOfConclusion != null ? dateOfConclusion.toIso8601String() : '',
+    };
+  }
+
   Task copyWith({
     String id,
-    int userId,
+    String userEmail,
     String name,
     String description,
     DateTime dateOfDelivery,
@@ -28,7 +53,7 @@ class Task {
   }) {
     return Task(
       id: id ?? this.id,
-      userEmail: userId ?? this.userEmail,
+      userEmail: userEmail ?? this.userEmail,
       name: name ?? this.name,
       description: description ?? this.description,
       dateOfDelivery: dateOfDelivery ?? this.dateOfDelivery,

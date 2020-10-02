@@ -1,10 +1,10 @@
 import 'package:fluttask/constrollers/auth_controller.dart';
-import 'file:///C:/Users/sthef/Documents/fsdfdsfds/fluttask/lib/data/repository/network/api_endpoints.dart';
+import 'package:fluttask/data/models/address.dart';
+import 'package:fluttask/data/models/credentials.dart';
+import 'package:fluttask/data/models/user.dart';
+import 'package:fluttask/data/repository/network/api_endpoints.dart';
 import 'package:fluttask/helpers/date_parser.dart';
 import 'package:fluttask/helpers/validators.dart';
-import 'package:fluttask/models/address.dart';
-import 'package:fluttask/models/credentials.dart';
-import 'package:fluttask/models/user.dart';
 import 'package:fluttask/routing/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -241,7 +241,7 @@ class _RegistrationFormPageState extends State<RegistrationFormPage> {
       cpf: cpfController.text,
       dateOfBirth: DateTimeFormatter.decode(dateOfBirthController.text),
       credentials: Credentials(
-        email: emailController.text,
+        email: emailController.text.trim().toLowerCase(),
         password: passwordController.text.hashCode.toString(),
       ),
       address: Address(

@@ -1,6 +1,6 @@
-import 'package:fluttask/models/credentials.dart';
-import 'package:fluttask/models/task.dart';
-import 'package:fluttask/models/user.dart';
+import 'package:fluttask/data/models/credentials.dart';
+import 'package:fluttask/data/models/task.dart';
+import 'package:fluttask/data/models/user.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -18,8 +18,8 @@ class Storage {
         );
         db.execute(
           "CREATE TABLE IF NOT EXISTS tasks"
-          "(id INTEGER PRIMARY KEY, name TEXT, description TEXT, isConcluded INTEGER"
-          "userEmail TEXT, dateOfDelivery TEXT, dateOfConclusion TEXT)",
+          "(id TEXT PRIMARY KEY, name TEXT, description TEXT, isConcluded INTEGER,"
+          ", userEmail TEXT, dateOfDelivery TEXT, dateOfConclusion TEXT)",
         );
       },
       version: 1,
@@ -63,9 +63,38 @@ class Storage {
     }
   }
 
-  static Future<bool> addTask(Task task) async {}
+  static Future<bool> addTask(Task task) async {
+    try {
+      final dataBase = await _getDataBase();
+
+      await dataBase.insert('tasks', task.toMap());
+
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
+  }
 
   static Future<bool> updateTask(Task task) async {}
 
   static Future<bool> removeTask(int taskId) async {}
+
+  static Future<List<Task>> getTasks(Credentials credentials) async {
+    try {
+      final dataBase = await _getDataBase();
+
+      final tasksData = await dataBase.query(
+        "TASKS",
+        where: "userEmail = ?",
+        whereArgs: [credentials.email],
+      );
+
+      print(tasksData);
+      return tasksData.map((taskMap) => Task.fromMap(taskMap)).toList();
+    } catch (e) {
+      print(e);
+      return [];
+    }
+  }
 }
