@@ -5,7 +5,7 @@ import '../models/user.dart';
 class AuthController extends GetxController {
   final user = Rx<User>();
 
-  Future<void> login(Credentials credentials) async {
+  Future<bool> login(Credentials credentials) async {
     //TODO
   }
 
@@ -13,7 +13,8 @@ class AuthController extends GetxController {
     //TODO
   }
 
-  Future<void> registerUser(User user) async {
+  Future<bool> registerUser(User user) async {
+    return false;
     //TODO
   }
 }

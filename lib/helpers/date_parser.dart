@@ -1,8 +1,5 @@
 class DateTimeFormatter {
-  static DateTime decode(
-    String dateAsString, [
-    bool differenceValidator(DateTime time, DateTime now),
-  ]) {
+  static DateTime decode(String dateAsString) {
     try {
       final dateSlices = dateAsString.split('/');
 
@@ -14,9 +11,6 @@ class DateTimeFormatter {
 
       if (date.year != year || date.month != month || date.day != day)
         return null;
-
-      if (differenceValidator != null &&
-          differenceValidator(date, DateTime.now())) return null;
 
       return date;
     } catch (_) {

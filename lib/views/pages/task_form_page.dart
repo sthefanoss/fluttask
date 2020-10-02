@@ -79,7 +79,7 @@ class _TaskFormPageState extends State<TaskFormPage> {
                 inputFormatters: [dateOfDeliveryFormatter],
                 validator: (text) {
                   if (text.isEmpty) return "Data de Entrega não pode ser nula.";
-                  if (DateTimeFormatter.decode(text, isInFiveYears) == null)
+                  if (DateTimeFormatter.decode(text) == null)
                     return "Data de Entrega inválida.";
                   return null;
                 },
@@ -91,7 +91,7 @@ class _TaskFormPageState extends State<TaskFormPage> {
                 inputFormatters: [dateOfConclusionFormatter],
                 validator: (text) {
                   if (text.isNotEmpty &&
-                      DateTimeFormatter.decode(text, isInFiveYears) == null)
+                      DateTimeFormatter.decode(text) == null)
                     return "Data de Conclusão inválida.";
                   return null;
                 },
@@ -117,9 +117,6 @@ class _TaskFormPageState extends State<TaskFormPage> {
       ),
     );
   }
-
-  bool isInFiveYears(DateTime date, DateTime now) =>
-      (date.year - now.year).abs() > 5;
 
   Future<void> _save() async {
     if (isAwaiting) return;

@@ -1,11 +1,11 @@
 class Address {
-  final cep;
-  final address;
-  final number;
+  final String cep;
+  final String location;
+  final String number;
 
   const Address({
     this.cep,
-    this.address,
+    this.location,
     this.number,
   });
 }
