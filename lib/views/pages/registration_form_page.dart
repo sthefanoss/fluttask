@@ -1,10 +1,11 @@
 import 'package:fluttask/constrollers/auth_controller.dart';
-import 'package:fluttask/data/repository/api_endpoints.dart';
+import 'file:///C:/Users/sthef/Documents/fsdfdsfds/fluttask/lib/data/repository/network/api_endpoints.dart';
 import 'package:fluttask/helpers/date_parser.dart';
 import 'package:fluttask/helpers/validators.dart';
 import 'package:fluttask/models/address.dart';
 import 'package:fluttask/models/credentials.dart';
 import 'package:fluttask/models/user.dart';
+import 'package:fluttask/routing/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -228,9 +229,9 @@ class _RegistrationFormPageState extends State<RegistrationFormPage> {
         await Get.find<AuthController>().registerUser(_getUserFromForm());
 
     if (wasSuccessful) {
-      Get.back();
+      Get.offAllNamed(RouteNames.tasksOverview);
     } else {
-      setState(() => isAwaiting = true);
+      setState(() => isAwaiting = false);
     }
   }
 
@@ -241,7 +242,7 @@ class _RegistrationFormPageState extends State<RegistrationFormPage> {
       dateOfBirth: DateTimeFormatter.decode(dateOfBirthController.text),
       credentials: Credentials(
         email: emailController.text,
-        password: passwordController.text,
+        password: passwordController.text.hashCode.toString(),
       ),
       address: Address(
         cep: cepController.text,

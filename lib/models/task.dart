@@ -1,6 +1,6 @@
 class Task {
   final String id;
-  final int userId;
+  final String userEmail;
   final String name;
   final String description;
   final DateTime dateOfDelivery;
@@ -9,7 +9,7 @@ class Task {
 
   const Task({
     this.id,
-    this.userId,
+    this.userEmail,
     this.name,
     this.description = '',
     this.dateOfDelivery,
@@ -28,7 +28,7 @@ class Task {
   }) {
     return Task(
       id: id ?? this.id,
-      userId: userId ?? this.userId,
+      userEmail: userId ?? this.userEmail,
       name: name ?? this.name,
       description: description ?? this.description,
       dateOfDelivery: dateOfDelivery ?? this.dateOfDelivery,

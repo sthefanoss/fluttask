@@ -1,4 +1,6 @@
+import 'package:fluttask/constrollers/auth_controller.dart';
 import 'package:fluttask/helpers/validators.dart';
+import 'package:fluttask/models/credentials.dart';
 import 'package:fluttask/routing/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,9 +11,13 @@ class LoginFormPage extends StatefulWidget {
 }
 
 class _LoginFormPageState extends State<LoginFormPage> {
+  final authController = Get.find<AuthController>();
+
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+
   final formKey = GlobalKey<FormState>();
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void dispose() {
@@ -23,6 +29,7 @@ class _LoginFormPageState extends State<LoginFormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       body: Form(
         key: formKey,
         child: Container(
@@ -110,6 +117,22 @@ class _LoginFormPageState extends State<LoginFormPage> {
   }
 
   Future<void> _login() async {
-    Get.offAndToNamed(RouteNames.tasksOverview);
+    bool wasSuccessful = await authController.login(
+      Credentials(
+        email: emailController.text,
+        password: passwordController.text.hashCode.toString(),
+      ),
+    );
+
+    if (wasSuccessful) {
+      scaffoldKey.currentState.hideCurrentSnackBar();
+      Get.offAndToNamed(RouteNames.tasksOverview);
+    } else {
+      scaffoldKey.currentState.showSnackBar(
+        SnackBar(
+          content: Text("Login inválido."),
+        ),
+      );
+    }
   }
 }

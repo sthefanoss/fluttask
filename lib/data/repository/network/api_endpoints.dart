@@ -8,10 +8,9 @@ abstract class ApiEndpoints {
     try {
       final response =
           await _dio.get("https://viacep.com.br/ws/$formattedCep/json/");
-      print(response);
+
       return response.data["logradouro"];
-    } catch (exception) {
-      print(exception);
+    } catch (_) {
       return null;
     }
   }
