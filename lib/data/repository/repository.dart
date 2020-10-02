@@ -22,7 +22,7 @@ abstract class Repository {
     return Storage.updateTask(task);
   }
 
-  static Future<bool> removeTask(int taskId) async {
+  static Future<bool> removeTask(String taskId) async {
     return Storage.removeTask(taskId);
   }
 

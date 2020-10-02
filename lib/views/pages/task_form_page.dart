@@ -127,7 +127,9 @@ class _TaskFormPageState extends State<TaskFormPage> {
     if (oldTask == null)
       wasSuccessful = await tasksController.createTask(_getTaskFromForm());
     else
-      wasSuccessful = await tasksController.editTask(_getTaskFromForm());
+      wasSuccessful = await tasksController.editTask(
+          oldTask.id,
+          _getTaskFromForm());
 
     if (wasSuccessful) {
       Get.back();

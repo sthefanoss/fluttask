@@ -30,42 +30,50 @@ class TasksController extends GetxController {
     return wasSuccessful;
   }
 
-  Future<bool> editTask(Task task) async {
-    final int taskIndex = _findTaskIndexById(task.id);
+  Future<bool> editTask(String id, Task task) async {
+    final int taskIndex = _findTaskIndexById(id);
 
-    if (taskIndex == -1) {
-      tasks.add(task);
-    } else {
-      tasks[taskIndex] = tasks[taskIndex].copyWith(
-          name: task.name,
-          description: task.description,
-          dateOfConclusion: task.dateOfConclusion,
-          dateOfDelivery: task.dateOfDelivery);
-    }
+    if (taskIndex == -1) return false;
 
-    return true;
+    Task modifiedTask = tasks[taskIndex].copyWith(
+      name: task.name,
+      description: task.description,
+      dateOfConclusion: task.dateOfConclusion,
+      dateOfDelivery: task.dateOfDelivery,
+    );
+
+    bool wasSuccessful = await Repository.updateTask(modifiedTask);
+
+    if (wasSuccessful) tasks[taskIndex] = modifiedTask;
+
+    return wasSuccessful;
   }
 
   Future<bool> deleteTask(String id) async {
     final int taskIndex = _findTaskIndexById(id);
 
-    tasks.removeAt(taskIndex);
+    bool wasSuccessful = await Repository.removeTask(id);
 
-    return true;
+    if (wasSuccessful) tasks.removeAt(taskIndex);
+
+    return wasSuccessful;
   }
 
   Future<bool> concludeTask(String id) async {
     final int taskIndex = _findTaskIndexById(id);
-    print(taskIndex);
 
-    if (tasks[taskIndex].isConcluded) return false;
+    if (taskIndex == -1) return false;
 
-    tasks[taskIndex] = tasks[taskIndex].copyWith(
+    Task modifiedTask = tasks[taskIndex].copyWith(
       isConcluded: true,
       dateOfConclusion: tasks[taskIndex].dateOfConclusion ?? DateTime.now(),
     );
 
-    return true;
+    bool wasSuccessful = await Repository.updateTask(modifiedTask);
+
+    if (wasSuccessful) tasks[taskIndex] = modifiedTask;
+
+    return wasSuccessful;
   }
 
   int _findTaskIndexById(String id) {

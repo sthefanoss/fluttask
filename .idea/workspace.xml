@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68496c0c-14a6-4021-b999-a99577913215" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constrollers/auth_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constrollers/auth_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/constrollers/tasks_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constrollers/tasks_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/data/repository/local/storage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/local/storage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/data/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/address.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/models/address.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/credentials.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/models/credentials.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/task.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/models/task.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/models/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/pages/login_form_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/login_form_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/pages/registration_form_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/registration_form_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/pages/task_form_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/task_form_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/pages/tasks_overview_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/tasks_overview_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/task_list_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/task_list_tile.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

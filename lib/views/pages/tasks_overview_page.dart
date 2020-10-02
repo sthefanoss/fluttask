@@ -51,8 +51,7 @@ class _TasksOverviewPageState extends State<TasksOverviewPage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        // onPressed: () => Get.toNamed(RouteNames.taskForm),
-        onPressed: tasksController.onInit,
+        onPressed: () => Get.toNamed(RouteNames.taskForm),
       ),
     );
   }

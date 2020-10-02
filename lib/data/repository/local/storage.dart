@@ -36,7 +36,10 @@ class Storage {
     try {
       final dataBase = await _getDataBase();
 
-      await dataBase.insert('users', user.toMap());
+      await dataBase.insert(
+        'users',
+        user.toMap(),
+      );
 
       return true;
     } catch (e) {
@@ -67,7 +70,10 @@ class Storage {
     try {
       final dataBase = await _getDataBase();
 
-      await dataBase.insert('tasks', task.toMap());
+      await dataBase.insert(
+        'tasks',
+        task.toMap(),
+      );
 
       return true;
     } catch (e) {
@@ -76,9 +82,40 @@ class Storage {
     }
   }
 
-  static Future<bool> updateTask(Task task) async {}
+  static Future<bool> updateTask(Task task) async {
+    try {
+      final dataBase = await _getDataBase();
 
-  static Future<bool> removeTask(int taskId) async {}
+      await dataBase.update(
+        'tasks',
+        task.toMap(),
+        where: 'id = ?',
+        whereArgs: [task.id],
+      );
+
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
+  }
+
+  static Future<bool> removeTask(String taskId) async {
+    try {
+      final dataBase = await _getDataBase();
+
+      await dataBase.delete(
+        'tasks',
+        where: 'id = ?',
+        whereArgs: [taskId],
+      );
+
+      return true;
+    } catch (e) {
+      print(e);
+      return false;
+    }
+  }
 
   static Future<List<Task>> getTasks(Credentials credentials) async {
     try {
