@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68496c0c-14a6-4021-b999-a99577913215" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/views/widgets/task_list_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constrollers/tasks_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constrollers/tasks_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/repository/local/storage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/local/storage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/repository/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/pages/task_form_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/task_form_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/pages/tasks_overview_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/tasks_overview_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/widgets/task_list_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/task_list_tile.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,26 +70,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="68" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1601508133269" />
-    <state width="1091" height="176" key="GridCell.Tab.0.bottom" timestamp="1601609611910">
+    <state width="1091" height="176" key="GridCell.Tab.0.bottom" timestamp="1601612447634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1091" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601609611910" />
-    <state width="1091" height="176" key="GridCell.Tab.0.center" timestamp="1601609611910">
+    <state width="1091" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601612447634" />
+    <state width="1091" height="176" key="GridCell.Tab.0.center" timestamp="1601612447634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1091" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601609611910" />
-    <state width="1091" height="176" key="GridCell.Tab.0.left" timestamp="1601609611909">
+    <state width="1091" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601612447634" />
+    <state width="1091" height="176" key="GridCell.Tab.0.left" timestamp="1601612447634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1091" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601609611909" />
-    <state width="1091" height="176" key="GridCell.Tab.0.right" timestamp="1601609611910">
+    <state width="1091" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601612447634" />
+    <state width="1091" height="176" key="GridCell.Tab.0.right" timestamp="1601612447634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1091" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601609611910" />
-    <state x="100" y="100" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1601588072065">
+    <state width="1091" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601612447634" />
+    <state x="126" y="109" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1601679978440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="100" y="100" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1601588072065" />
+    <state x="126" y="109" width="1336" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1601679978440" />
     <state x="230" y="72" width="672" height="676" key="search.everywhere.popup" timestamp="1601599253739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

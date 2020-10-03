@@ -29,8 +29,9 @@ class _TaskListTileState extends State<TaskListTile> {
       subtitle: Text(_tileSubtitle()),
       onTap: () => setState(() => isCollapsed = !isCollapsed),
       leading: Checkbox(
-        onChanged:
-            widget.task.isConcluded ? null : ((_) => widget.onConcludeClick()),
+        onChanged: (_) {
+          if (!widget.task.isConcluded) widget.onConcludeClick();
+        },
         value: widget.task.isConcluded,
       ),
       trailing: Row(
