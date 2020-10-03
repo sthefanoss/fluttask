@@ -62,7 +62,7 @@ class _LoginFormPageState extends State<LoginFormPage> {
               ),
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.black.withOpacity(0.7),
                     borderRadius: BorderRadius.circular(4)),
                 padding: EdgeInsets.all(4),
                 child: TextFormField(
@@ -78,7 +78,7 @@ class _LoginFormPageState extends State<LoginFormPage> {
               const SizedBox(height: 8),
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.black.withOpacity(0.7),
                     borderRadius: BorderRadius.circular(4)),
                 padding: EdgeInsets.all(4),
                 child: TextFormField(
@@ -95,12 +95,12 @@ class _LoginFormPageState extends State<LoginFormPage> {
                 children: [
                   FlatButton(
                     child: Text('Registrar'),
-                    color: Colors.white.withOpacity(0.5),
+                    color: Colors.black.withOpacity(0.5),
                     onPressed: _navigateToRegistrationPage,
                   ),
                   FlatButton(
                     child: Text('Entrar'),
-                    color: Colors.white.withOpacity(0.5),
+                    color: Colors.black.withOpacity(0.5),
                     onPressed: _login,
                   ),
                 ],

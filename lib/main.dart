@@ -10,6 +10,7 @@ class FlutTaskApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       getPages: appPages,
+      theme: ThemeData.dark(),
       initialBinding: InitialBindings(),
     );
   }
