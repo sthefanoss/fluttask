@@ -35,16 +35,17 @@ class AppDrawer extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text("Sair"),
-              onTap: () {
-                CustomAlertDialog(
+              onTap: () async {
+                bool response = await CustomAlertDialog(
                   titleText: "Sair",
                   subtitleText: "Tens certeza que desejas sair da sua conta?",
-                  onConfirmAction: () {
-                    Get.back();
-                    authController.logout();
-                    Get.offAndToNamed(RouteNames.home);
-                  },
                 ).show();
+
+                if (!response) return;
+
+                Get.back();
+                authController.logout();
+                Get.offAndToNamed(RouteNames.home);
               },
             ),
           )

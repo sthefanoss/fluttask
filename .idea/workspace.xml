@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68496c0c-14a6-4021-b999-a99577913215" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/views/widgets/task_list_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/pages/tasks_overview_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/tasks_overview_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/pages/login_form_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/pages/login_form_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/widgets/app_drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/app_drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/widgets/custom_alert_dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/custom_alert_dialog.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/widgets/task_list_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/task_list_tile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/widgets/task_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/task_list_view.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
