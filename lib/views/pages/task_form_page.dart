@@ -68,17 +68,21 @@ class _TaskFormPageState extends State<TaskFormPage> {
                 decoration: InputDecoration(labelText: 'Nome *'),
                 maxLength: 40,
                 validator: (text) {
-                  if (text.isEmpty) return "Nome não pode ser nulo.";
+                  if (text.isEmpty) return "Nome é um campo obrigatório.";
                   return null;
                 },
               ),
               TextFormField(
                 enabled: !isAwaiting,
                 controller: dateOfDeliveryController,
-                decoration: InputDecoration(labelText: 'Data de Entrega *'),
+                decoration: InputDecoration(
+                  labelText: 'Data de Entrega *',
+                  hintText: "dd/mm/aaaa",
+                ),
+                keyboardType: TextInputType.number,
                 inputFormatters: [dateOfDeliveryFormatter],
                 validator: (text) {
-                  if (text.isEmpty) return "Data de Entrega não pode ser nula.";
+                  if (text.isEmpty) return "Data de Entrega é um campo obrigatório.";
                   if (DateTimeFormatter.decode(text) == null)
                     return "Data de Entrega inválida.";
                   return null;
@@ -87,7 +91,11 @@ class _TaskFormPageState extends State<TaskFormPage> {
               TextFormField(
                 enabled: !isAwaiting,
                 controller: dateOfConclusionController,
-                decoration: InputDecoration(labelText: 'Data de Conclusão'),
+                decoration: InputDecoration(
+                  labelText: 'Data de Conclusão',
+                  hintText: "dd/mm/aaaa",
+                ),
+                keyboardType: TextInputType.number,
                 inputFormatters: [dateOfConclusionFormatter],
                 validator: (text) {
                   if (text.isNotEmpty && DateTimeFormatter.decode(text) == null)
@@ -127,9 +135,8 @@ class _TaskFormPageState extends State<TaskFormPage> {
     if (oldTask == null)
       wasSuccessful = await tasksController.createTask(_getTaskFromForm());
     else
-      wasSuccessful = await tasksController.editTask(
-          oldTask.id,
-          _getTaskFromForm());
+      wasSuccessful =
+          await tasksController.editTask(oldTask.id, _getTaskFromForm());
 
     if (wasSuccessful) {
       Get.back();

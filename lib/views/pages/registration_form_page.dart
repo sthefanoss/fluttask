@@ -76,6 +76,7 @@ class _RegistrationFormPageState extends State<RegistrationFormPage> {
                     TextFormField(
                       enabled: !isAwaiting,
                       controller: cpfController,
+                      keyboardType: TextInputType.number,
                       decoration: InputDecoration(labelText: 'CPF'),
                       inputFormatters: [cpfFormatter],
                       validator: (text) {
@@ -87,9 +88,12 @@ class _RegistrationFormPageState extends State<RegistrationFormPage> {
                     TextFormField(
                       enabled: !isAwaiting,
                       controller: dateOfBirthController,
-                      decoration:
-                          InputDecoration(labelText: 'Data de Nascimento *'),
+                      decoration: InputDecoration(
+                        labelText: 'Data de Nascimento *',
+                        hintText: "dd/mm/aaaa",
+                      ),
                       inputFormatters: [dateOfBirthFormatter],
+                      keyboardType: TextInputType.number,
                       validator: (text) {
                         if (text.isEmpty)
                           return "Data de Nascimento é um campo obrigatório.";
@@ -153,6 +157,7 @@ class _RegistrationFormPageState extends State<RegistrationFormPage> {
                     ),
                     TextFormField(
                       enabled: !isAwaiting,
+                      keyboardType: TextInputType.number,
                       controller: cepController,
                       decoration: InputDecoration(labelText: 'CEP'),
                       inputFormatters: [cepFormatter],
@@ -167,6 +172,7 @@ class _RegistrationFormPageState extends State<RegistrationFormPage> {
                     TextFormField(
                       enabled: !isAwaiting,
                       controller: numberController,
+                      keyboardType: TextInputType.number,
                       decoration: InputDecoration(labelText: 'Número'),
                     ),
                     const SizedBox(
