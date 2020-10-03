@@ -29,7 +29,7 @@ class _TaskListTileState extends State<TaskListTile> {
         return await CustomAlertDialog(
           titleText: "Excluir Tarefa?",
           subtitleText: "Desejas realmente excluir a tarefa "
-              "${widget.task.name}}?",
+              "${widget.task.name}?",
         ).show();
       },
       onDismissed: (_) => tasksController.deleteTask(widget.task.id),
