@@ -19,7 +19,7 @@ class Storage {
         db.execute(
           "CREATE TABLE IF NOT EXISTS tasks"
           "(id TEXT PRIMARY KEY, name TEXT, description TEXT, isConcluded INTEGER,"
-          ", userEmail TEXT, dateOfDelivery TEXT, dateOfConclusion TEXT)",
+          "userEmail TEXT, dateOfDelivery TEXT, dateOfConclusion TEXT)",
         );
       },
       version: 1,
